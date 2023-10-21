@@ -6,23 +6,32 @@ using UnityEngine.XR.Content.Interaction;
 
 public class MoveMagnet : MonoBehaviour
 {
-    public Transform magnetTransform;
-    public Vector2 JoystickValue;
-    public XRJoystick joystick;
-    float speed = 10.0f;
+    public GameObject magnet;
+    public XRLever lever;
+    float speed = 1f;
+    public bool isMoving;
+   
+    
     void Update()
     {
-        var magnetPosition = magnetTransform.localPosition;
-        magnetPosition += new Vector3(JoystickValue.x * speed * Time.deltaTime, 0f, JoystickValue.y * speed * Time.deltaTime);
-        
+        if (isMoving)
+        {
+            magnet.transform.position = Vector3.Lerp(magnet.gameObject.transform.position, new Vector3(0, magnet.transform.position.y, 5), speed * Time.deltaTime);
+        }
+        else
+        {
+            magnet.transform.position = Vector3.Lerp(magnet.gameObject.transform.position, new Vector3(0, magnet.transform.position.y, 10), speed * Time.deltaTime);
+        }
+       
+
     }
-    public void onJoystickValueChangeX(float x)
+    public void onLeverActivate()
     {
-        JoystickValue.x = x;
+        isMoving = true;
     }
-    public void onJoystickValueChangeY(float y)
+    public void onLeverDeactivate()
     {
-        JoystickValue.y = y;
+        isMoving = false;
     }
     
     //public void shiftMagnet()

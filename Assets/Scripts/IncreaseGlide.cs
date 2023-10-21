@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IncreaseGlide : MonoBehaviour
 {
+    public GameObject floor;
     public float airResistance = 0.01f;
     Rigidbody rigidbod;
 
@@ -16,6 +17,10 @@ public class IncreaseGlide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            floor.SetActive(false);
+        }
        if(Input.GetKeyDown(KeyCode.E))
        {
             rigidbod.drag = rigidbod.drag + airResistance;
