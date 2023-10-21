@@ -13,6 +13,10 @@ public class MenuManager : MonoBehaviour
     public GameObject creditsScreen;
     public GameObject controlsScreen;
 
+    public void Start()
+    {
+        Settings();
+    }
 
     public void StartGame()
     {
