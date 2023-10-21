@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public string startingScene;
 
-    public GameObject fadeScreen;
+    //public GameObject fadeScreen;
     public GameObject mainmenuScreen;
     public GameObject settingsScreen;
     public GameObject creditsScreen;
@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
 
     public void Start()
     {
-        Settings();
+        mainmenuScreen.SetActive(true);
     }
 
     public void StartGame()
@@ -63,10 +63,10 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator StartingGame()
     {
-        fadeScreen.SetActive(true);
+       // fadeScreen.SetActive(true);
 
         yield return new WaitForSeconds(4);
 
-        SceneManager.LoadScene(startingScene);
+        SceneManager.LoadScene(/*startingScene*/"1HackathonLevel");
     }
 }
