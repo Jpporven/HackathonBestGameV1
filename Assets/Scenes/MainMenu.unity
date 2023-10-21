@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -59537,7 +59537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a02ea63320b64663ad1c370ba5ad5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: 1Hackathon
+  startingScene: 1HackathonLevel
   fadeScreen: {fileID: 1066790730}
   mainmenuScreen: {fileID: 5969370768909002299}
   settingsScreen: {fileID: 7975654370491437331}
