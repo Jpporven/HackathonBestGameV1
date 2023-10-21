@@ -180,7 +180,9 @@ PrefabInstance:
       value: 2HackathonLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3287312799692867823, guid: d7c47992b3f3e9e41b0c6b299a087f16, type: 3}
+    - {fileID: 3661846988594222644, guid: d7c47992b3f3e9e41b0c6b299a087f16, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7c47992b3f3e9e41b0c6b299a087f16, type: 3}

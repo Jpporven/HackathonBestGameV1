@@ -6,7 +6,7 @@ using UnityEngine;
 public class MagneticPull : MonoBehaviour
 {
     Rigidbody triggeredRigidbody;
-    GameObject triggeredObject;
+    public GameObject triggeredObject;
     float directionY;
     float magneticPull = 1000f;
     bool inMagnetRange = false;

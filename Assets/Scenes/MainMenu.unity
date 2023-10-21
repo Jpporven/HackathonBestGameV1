@@ -136,6 +136,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3188317606501754344, guid: 70336ad6ed8952e4198300b13b8ab8a7, type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737525185809152330, guid: 70336ad6ed8952e4198300b13b8ab8a7, type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7521646246464247216, guid: 70336ad6ed8952e4198300b13b8ab8a7, type: 3}
       propertyPath: m_Name
       value: MainMenu
@@ -185,7 +193,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3341333661574566707, guid: 70336ad6ed8952e4198300b13b8ab8a7, type: 3}
+    - {fileID: 3535698164055199208, guid: 70336ad6ed8952e4198300b13b8ab8a7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7254562735628666070, guid: 70336ad6ed8952e4198300b13b8ab8a7, type: 3}
