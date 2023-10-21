@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ControlsFadeOut
-  m_Speed: -0.4
+  m_Speed: -0.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5641872864640838936}
@@ -88,7 +88,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ControlsFadeIn
-  m_Speed: -0.4
+  m_Speed: -0.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8390725964475701241}
