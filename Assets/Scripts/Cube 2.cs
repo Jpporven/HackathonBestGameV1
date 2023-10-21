@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class Cube2 : MonoBehaviour
 {
@@ -10,18 +11,21 @@ public class Cube2 : MonoBehaviour
     public float mass;
     public GameManager manager;
     public bool checkTemp;
-    
+    public TMP_Text temperatureText;
+
     // Start is called before the first frame update
     void Start()
     {
         checkTemp = false;
         mass = this.gameObject.GetComponent<Rigidbody>().mass;
         temperature = 25;
+        temperatureText.text = "Temperature = " + temperature;
     }
 
     // Update is called once per frame
     void Update()
     {
+        temperatureText.text= "Temperature = " + temperature;
         if (temperature == (int)manager.equalTemp && checkTemp == true)
         {
             Debug.Log("Temperature Found");
@@ -60,7 +64,7 @@ public class Cube2 : MonoBehaviour
     {
         while (temp == true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
 
             Debug.Log(temperature);
             temperature++;

@@ -14,9 +14,9 @@ public class GameManager : MonoBehaviour
     {
         cube2.GetComponent<Renderer>();
         cube1.GetComponent<Renderer>();
-        equalTempColor = Color.white;
         cube1.GetComponent<Cube1>();
         cube2.GetComponent<Cube2>();
+        equalTempColor = Color.magenta;
         calculatingEqualTemperature(cube1, cube2);
         Debug.Log((int)equalTemp);
     }
@@ -28,8 +28,9 @@ public class GameManager : MonoBehaviour
         
         if (cube1.temperature == (int)equalTemp )
         {
-            
-            cube1.material.material.color = equalTempColor;
+
+            //cube1.Transition();
+           
         }
         if(cube2.temperature == (int)equalTemp)
         {
@@ -37,16 +38,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-  private float calculatingEqualTemperature(Cube1 temperature , Cube2 temperature2)
+  public float calculatingEqualTemperature(Cube1 cube1, Cube2 cube2)
     {
        
-        float Tm1 = temperature.mass * temperature.temperature;
-        float Tm2 = temperature2.mass * temperature2.temperature;
-        float masses = temperature.mass + temperature2.mass;
-
+        float Tm1 = cube1.mass * cube1.temperature;
+        float Tm2 = cube2.mass * cube2.temperature;
+        float masses = cube1.mass + cube2.mass;
+            
         equalTemp = (Tm1 + Tm2) / masses ;
+
+        Debug.Log("" + cube1.mass + " " + cube2.mass + " " + cube1.temperature + " " + cube2.temperature);
+        return (int)equalTemp;
+
         
-        return (int)equalTemp;  
     }
 
 
